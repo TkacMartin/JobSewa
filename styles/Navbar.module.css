@@ -225,3 +225,75 @@
     font-size: 1.125rem;
   }
 }
+
+/* Add this for the theme toggle button */
+.themeToggleButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.themeButton {
+  background-color: #007bff; /* Blue color */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.themeButton:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.themeButton:focus {
+  outline: none;
+}
+
+/* Dark theme */
+body.dark {
+  background-color: #121212;
+  color: #fff;
+}
+
+body.dark .navbar {
+  background-color: #333;
+}
+
+body.dark .navLinks .navItem,
+body.dark .mobileMenu .mobileNavItem {
+  color: #fff;
+}
+
+body.dark .themeButton {
+  background-color: #ff9f00;
+}
+
+body.dark .themeButton:hover {
+  background-color: #e68900;
+}
+
+/* Light theme */
+body.light {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+body.light .navbar {
+  background-color: #fff;
+}
+
+body.light .navLinks .navItem,
+body.light .mobileMenu .mobileNavItem {
+  color: #212529;
+}
+
+body.light .themeButton {
+  background-color: #007bff;
+}
+
+body.light .themeButton:hover {
+  background-color: #0056b3;
+}
