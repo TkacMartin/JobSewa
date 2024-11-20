@@ -99,6 +99,55 @@ export default function NavBar({ onThemeToggle }) {
           ))}
       </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
       <div className={styles.userActions}>
         {user ? (
           <>
@@ -113,6 +162,8 @@ export default function NavBar({ onThemeToggle }) {
         )}
       </div>
 
+
+
       <div className={`${styles.themeToggleButton} ${buttonBackgroundColor}`}>
         <button onClick={toggleTheme} className={styles.themeButton}>
           {theme === "light" ? "Dark" : "Light"} Theme
@@ -124,13 +175,16 @@ export default function NavBar({ onThemeToggle }) {
       </div>
 
       {isOpen && (
+
         <div ref={dropdownRef} className={`${styles.mobileMenu} ${styles.open}`}>
           <Link href="/" onClick={() => setIsOpen(false)} className={`${styles.mobileNavItem} ${router.pathname === "/" ? styles.active : ""}`}>
             Home
           </Link>
+
           <button onClick={() => setOpenJobs(!openJobs)} className={styles.mobileNavItem}>
             Jobs {openJobs ? <AiFillCaretUp /> : <AiFillCaretDown />}
           </button>
+
           {openJobs && (
             <div className={styles.mobileSubMenu}>
               <Link href="/frontend/displayJobs" onClick={() => setIsOpen(false)} className={styles.mobileNavItem}>
@@ -144,9 +198,13 @@ export default function NavBar({ onThemeToggle }) {
               </Link>
             </div>
           )}
+
+
+
           <Link href="/frontend/dashboard" onClick={() => setIsOpen(false)} className={styles.mobileNavItem}>
             Dashboard
           </Link>
+
           <Link href="/frontend/organizations" onClick={() => setIsOpen(false)} className={styles.mobileNavItem}>
             Organizations
           </Link>
