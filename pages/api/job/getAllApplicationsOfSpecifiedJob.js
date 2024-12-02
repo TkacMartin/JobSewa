@@ -20,6 +20,20 @@ export default async (req, res) => {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const getAllApplicationsOfSpecifiedJob =  async (req, res) => {
     await ConnectDB();
     const data = req.query;

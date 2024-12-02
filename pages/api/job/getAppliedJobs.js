@@ -1,9 +1,6 @@
 import ConnectDB from '@/DB/connectDB';
 import validateToken from '@/middleware/tokenValidation';
 import ApplyJob from '@/models/ApplyJob';
-
-
-
 export default async (req, res) => {
     await ConnectDB();
     const { method } = req;
@@ -17,8 +14,6 @@ export default async (req, res) => {
             res.status(400).json({ success: false, message: 'Invalid Request' });
     }
 }
-
-
 
 const getAppliedJobs =  async (req, res) => {
     await ConnectDB();
